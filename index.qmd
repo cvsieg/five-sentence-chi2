@@ -42,8 +42,8 @@ books = pd.read_csv(domain + path + file)
 
 ```
 Our null hypothesis it doesn't predict genre. We study this with `{python} f"{books.shape[0]}"` books where we know the books genre and the books cover color such that we can conduct a chi2 test to see if these two variables are either independe3nt to dependent
-`{python}f"{books['book_genre'].nunique()}"`
-`{python}f"{books['book_color'].nunique()}"`
+`{python} f"{books['book_genre'].nunique()}"`
+`{python} f"{books['book_color'].nunique()}"`
 
 # Results
 
