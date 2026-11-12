@@ -1,0 +1,70 @@
+---
+title: "A five sentence term paper using chi2 analysis"
+execute:
+    echo: true
+date: 10/22/26
+author:
+  - name: Connor
+    afilliation:
+      University of Wisconsin-Madison
+keywords:
+  - Chi2
+  - Quarto
+  - Python
+  - DSHB
+bibliography: references.bib
+---
+
+# Introduction 
+
+RQ: Does the color of the book predict the books genre
+
+This paper explores whether there is a connection between the color of a book and its genre.
+
+# Literature Review
+
+Book Genre Prediction Using NLP: A Review [@vayadande2024book]
+
+# Method
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+from scipy.stats import chi2_contingency
+
+domain = 'https://raw.githubusercontent.com/'
+path = "adamrossnelson/confident/refs/heads/main/data/"
+file = "confident_fictional_books.csv"
+
+books = pd.read_csv(domain + path + file)
+
+```
+Our null hypothesis it doesn't predict genre. We study this with `{python} f"{books.shape[0]}"` books where we know the books genre and the books cover color such that we can conduct a chi2 test to see if these two variables are either independe3nt to dependent
+`{python}f"{books['book_genre'].nunique()}"`
+`{python}f"{books['book_color'].nunique()}"`
+
+# Results
+
+```{python}
+# Conduct the chi2 with chi2_contingency by passing the observed
+x2, pval, degf, _ = chi2_contingency(
+    pd.crosstab(books['book_genre'], books['book_color']))
+```
+
+Results: Chi2 stat: `{python} f"{round(x2,5)}"` - Pvalue: `{python} f"{round(pval, 10)}"` - degrees of freedom: `{python} f"{round(degf, 2)}"`.
+
+
+# Discussion
+
+Unfortunately, you cannot predict the genre of a book based on the color of it.
+
+# References
+::: {#refs}
+:::
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+

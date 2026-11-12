@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "A five sentence term paper using chi2 analysis"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+
