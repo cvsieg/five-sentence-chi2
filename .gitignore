@@ -1,4 +1,5 @@
-# =========================
+# This was mad using gemini
+=========================
 # Quarto Artifacts & Output
 # =========================
 /.quarto/
@@ -81,3 +82,4 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
+**/*.quarto_ipynb
