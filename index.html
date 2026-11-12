@@ -236,7 +236,7 @@ div.csl-indent {
 </section>
 <section id="method" class="level1">
 <h1>Method</h1>
-<div id="6e75876b" class="cell" data-execution_count="1">
+<div id="44595c5b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -249,11 +249,11 @@ div.csl-indent {
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>books <span class="op">=</span> pd.read_csv(domain <span class="op">+</span> path <span class="op">+</span> <span class="bu">file</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Our null hypothesis it doesn’t predict genre. We study this with 359 books where we know the books genre and the books cover color such that we can conduct a chi2 test to see if these two variables are either independe3nt to dependent <code>{python}f"{books['book_genre'].nunique()}"</code> <code>{python}f"{books['book_color'].nunique()}"</code></p>
+<p>Our null hypothesis it doesn’t predict genre. We study this with 359 books where we know the books genre and the books cover color such that we can conduct a chi2 test to see if these two variables are either independe3nt to dependent 6 6</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<div id="f9ae6349" class="cell" data-execution_count="2">
+<div id="5dfdde8a" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Conduct the chi2 with chi2_contingency by passing the observed</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x2, pval, degf, _ <span class="op">=</span> chi2_contingency(</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    pd.crosstab(books[<span class="st">'book_genre'</span>], books[<span class="st">'book_color'</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
